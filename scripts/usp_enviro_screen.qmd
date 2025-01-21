@@ -1,0 +1,57 @@
+---
+title: "USP Watershed EnviroScreen Analysis"
+format: html
+editor: visual
+---
+
+```{r}
+rm(list=ls())
+```
+
+## Load packages
+
+```{r}
+library(tidyverse)
+library(sf)
+library(terra)
+library(here)
+library(tmap)
+```
+
+## Load data
+
+```{r}
+## Load the EnviroScreen data
+
+# block group 
+block_enviro <- st_read(here("data/EnviroScreen/ColoradoEnviroScreen_v2_BlockGroup/ColoradoEnviroScreen_v2_BlockGroup_24118_Final.shp"))
+
+# census tract 
+census_enviro <- st_read(here("data/EnviroScreen/ColoradoEnviroScreen_v2_CensusTract/ColoradoEnviroScreen_v2_CensusTract.shp"))
+
+# county 
+county_enviro <- st_read(here("data/EnviroScreen/ColoradoEnviroScreen_v2_County/ColoradoEnviroScreen_v2_County.shp"))
+
+## watershed data 
+
+# HUC 8
+huc8 <- st_read(here("data/WBD/WBDHU8/WBDHU8.shp"))
+
+# HUC 12
+huc12 <- st_read(here("data/WBD/WBDHU12/WBDHU12.shp"))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
